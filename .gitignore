@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.idea/
+.vscode/
+*.log
+.sites-runtime/
+.wrangler/
+.next/
+dist/
