@@ -56,9 +56,16 @@
       <div class="base-title"><span>MOTHER BASE // DECK 01</span><strong id="baseRoom">CENTRAL CONCOURSE</strong></div>
       <div class="base-mission"><span>CAMPAIGN STATUS</span><strong id="baseMission">SECTOR 1 · 1 HOSTILE SIGNATURE</strong></div>
       <div class="base-tech-tree" aria-label="Mother Base technology status">
-        <span>SHIP SYSTEMS <b id="shipTreeStatus">0 / 9</b></span>
-        <span>BASE EXPANSIONS <b id="baseTreeStatus">0 / 3</b></span>
+        <span>SHIP SYSTEMS <b id="shipTreeStatus">0 / 18</b></span>
+        <span>BASE EXPANSIONS <b id="baseTreeStatus">0 / 5</b></span>
         <span>PILOT SUIT <b id="suitTintStatus">CYAN</b></span>
+      </div>
+      <div class="base-population" aria-label="Earth population status">
+        <span>EARTH STATION // OBSERVATION</span>
+        <div class="population-row"><b>POPULATION</b><strong id="earthPopulation">7,900,000,000</strong></div>
+        <div id="populationTrend" class="population-trend">▬ HOLDING STEADY</div>
+        <div class="cure-track"><div id="cureFill" class="cure-fill"></div></div>
+        <span id="cureLabel">CURE PROGRESS 0%</span>
       </div>
       <div class="seed-ledger">
         <span>SEED VAULT</span>
@@ -125,6 +132,14 @@
 
     <div id="warpFlash" class="warp-flash" aria-hidden="true"></div>
 
+    <section id="pauseScreen" class="overlay pause-overlay">
+      <div class="eyebrow"><span></span> FLIGHT PAUSED <span></span></div>
+      <h2>SYSTEMS<br><em>STANDBY</em></h2>
+      <button id="resumeButton" class="primary-button">RESUME <span>▶</span></button>
+      <button id="restartSectorButton" class="secondary-button">RESTART <span>↻</span></button>
+      <button id="exitToBaseButton" class="text-button">EXIT TO MOTHER BASE</button>
+    </section>
+
     <section id="gameOverScreen" class="overlay">
       <div class="eyebrow warning"><span></span> SIGNAL LOST <span></span></div>
       <h2>DRIVE<br><em>COLLAPSED</em></h2>
@@ -153,6 +168,7 @@
     </section>
 
     <div id="touchHint" class="touch-hint">DRAG TO STEER</div>
+    <button id="pauseButton" class="pause-button" aria-label="Pause game"><span></span><span></span></button>
     <button id="fireButton" class="fire-button" aria-label="Fire laser cannon"><span>FIRE</span><i></i></button>
     <div id="baseJoystick" class="base-joystick" aria-label="Movement joystick"><i id="baseJoystickKnob"></i></div>
     <button id="baseInteract" class="base-interact" aria-label="Interact"><span>USE</span><i></i></button>
