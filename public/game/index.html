@@ -11,6 +11,7 @@
 <body>
   <main class="game-shell" aria-label="Starbound Velocity game">
     <canvas id="gameCanvas" aria-label="Space flight game canvas"></canvas>
+    <canvas id="astronautCanvas3D" aria-hidden="true"></canvas>
 
     <header class="hud" aria-live="polite">
       <div class="hud-block score-block">
@@ -119,6 +120,7 @@
           <div class="assembly-heading"><div><span>VISUAL MODULAR ASSEMBLY BAY</span><strong id="assemblyHullName">APEX INTERCEPTOR</strong></div><div id="hullSelector" class="hull-selector" aria-label="Select hull"></div></div>
           <div id="assemblyStage" class="assembly-stage">
             <canvas id="assemblyCanvas" width="520" height="390" aria-label="Selected ship modular wireframe"></canvas>
+            <canvas id="assemblyCanvas3D" aria-label="Selected ship 3D render"></canvas>
             <button class="module-socket socket-wings" data-part="wings"><b>WINGS</b><span>AGILITY / SPEED</span><i></i></button>
             <button class="module-socket socket-core" data-part="core"><b>CORE</b><span>AETHER SHIELD</span><i></i></button>
             <button class="module-socket socket-cannons" data-part="cannons"><b>CANNONS</b><span>FIRE RATE / DAMAGE</span><i></i></button>
@@ -174,5 +176,7 @@
     <button id="baseInteract" class="base-interact" aria-label="Interact"><span>USE</span><i></i></button>
   </main>
   <script src="game.js"></script>
+  <script src="vendor/three-0.160.0.min.js"></script>
+  <script src="three-scenes.js"></script>
 </body>
 </html>
